@@ -1,50 +1,174 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Happy Birthday ❤️</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            color: white;
-        }
-        #content {
-            display: none;
-            margin-top: 50px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 10px;
-            background: white;
-            color: #ff4b5c;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<title>Happy Birthday Rawan ❤️</title>
 
-<h1>Enter Password 🎁</h1>
-<input type="password" id="password">
-<button onclick="checkPassword()">Open</button>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff758c,#ff7eb3);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-<div id="content">
-    <h1>Happy Birthday My Love ❤️</h1>
-    <p>انهارده بجد يوم مش عادي هو انهارده يوم بنتي كبرت فيه سنه من عمرها هي مجرد سن بس هي هتفضل ب عيوني بنتي اللي مدلعه في عيوني طول العمر دا مش اول عيد ميلاد ليكي معايا دا التاني و مش الاخير بينا علشان احنا مع بعض و هنفضل في ضهر بعض طول العمر يا بنت قلبي عشان انتي كل حاجه حلوه حصلت في حياتي كل سنه و انتي ملكه حياتي و دنيتي و حبيبتي و صاحبتي و خطيبتي و اختي و مراتي.و ام عيالي و كل ما ليا حرفياً مبسوط اوي اني هكون معاكي فاليوم دا و مبسوط اكتر و اكتر علشان احنا مع بعض و في ضهر بعض طول العمر مهما كان اي اللي حصل عدينا سنه من عمرك كان فيها الحلو و الوحش بس اتمني السنه الجديده اللي هتبدأيها تحققي فيها كل امنياتك و احلامك قعدت مستني اليوم دا ب فارغ الصبر علشان اشوف القمر و هو بيخلص سنه من عمرو و اكون معاه و هو بيبدأ سنه جديده من عمرو بحبك و بحب كل لحظه حلوه او وحشه جمعتنا لا و كمان الوحش قبل الحلو علشان معني اننا مهما كان في بينا مشاكل او اي حاجه وحشه هي كانت بتجمعنا ببعض اكتر و بتقوي علاقتنا اكتر ببعض كل سنه و احنا هنفضل دائما ف ضهر بعض و سند ل بعض كل سنه و انتي اللي عرفتيني يعني ايه حياه يعني اي حب بجد و عايز اقولك ان بابا هيفضل معاكي و فضهرك طول العمر و يارب تبدأي سنه جديده و تحققي كل اللي نفسك فيه كلو و اطمني هفضل وراكي لحد م تحققي حلمك و بحبك ❤️ 💕</p>
-    <p>أنا عامل الموقع ده مخصوص عشانك 🎂</p>
-</div>
+/* Falling hearts */
+.heart {
+    position: fixed;
+    top: -10px;
+    color: pink;
+    animation: fall linear infinite;
+}
 
-<script>
-function checkPassword() {
-    var pass = document.getElementById("password").value;
-    if(pass === "2211") {
-        document.getElementById("content").style.display = "block";
-    } else {
-        alert("Wrong Password 😢");
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
     }
 }
+
+/* Main box */
+.box {
+    margin-top: 100px;
+}
+
+input, button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    margin: 10px;
+}
+
+button {
+    background: white;
+    color: #ff4b5c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffe6ea;
+}
+
+#content {
+    display: none;
+    margin-top: 50px;
+}
+
+img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: show 2s forwards;
+}
+
+@keyframes show {
+    to { opacity: 1; }
+}
+
+#message {
+    font-size: 22px;
+    width: 80%;
+    margin: auto;
+    min-height: 60px;
+}
+
+#countdown {
+    font-size: 20px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Enter The Secret Password 💌</h2>
+<input type="password" id="pass">
+<button onclick="check()">Open</button>
+</div>
+
+<div id="content">
+    <h1>Happy Birthday Rawan 🎂❤️</h1>
+
+    <div id="countdown"></div>
+
+    <p id="message"></p>
+   <img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo1.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo2.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo3.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo4.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo5.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo6.jpg.jpeg">
+<img src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/photo7.jpg.jpeg">
+
+
+</div>
+
+<!-- موسيقى -->
+<audio autoplay loop>
+<source src="https://raw.githubusercontent.com/ahmedslamv/for-my-daughter/main/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// PASSWORD
+function check(){
+    if(document.getElementById("pass").value === "2211"){
+        document.getElementById("content").style.display="block";
+        startTyping();
+        startCountdown();
+    } else {
+        alert("Wrong password 😢");
+    }
+}
+
+// TYPEWRITER EFFECT
+const text = "Rawan ❤️ انهارده بجد يوم مش عادي هو انهارده يوم بنتي كبرت فيه سنه من عمرها هي مجرد سن بس هي هتفضل ب عيوني بنتي اللي مدلعه في عيوني طول العمر دا مش اول عيد ميلاد ليكي معايا دا التاني و مش الاخير بينا علشان احنا مع بعض و هنفضل في ضهر بعض طول العمر يا بنت قلبي عشان انتي كل حاجه حلوه حصلت في حياتي كل سنه و انتي ملكه حياتي و دنيتي و حبيبتي و صاحبتي و خطيبتي و اختي و مراتي.و ام عيالي و كل ما ليا حرفياً مبسوط اوي اني هكون معاكي فاليوم دا و مبسوط اكتر و اكتر علشان احنا مع بعض و في ضهر بعض طول العمر مهما كان اي اللي حصل عدينا سنه من عمرك كان فيها الحلو و الوحش بس اتمني السنه الجديده اللي هتبدأيها تحققي فيها كل امنياتك و احلامك قعدت مستني اليوم دا ب فارغ الصبر علشان اشوف القمر و هو بيخلص سنه من عمرو و اكون معاه و هو بيبدأ سنه جديده من عمرو بحبك و بحب كل لحظه حلوه او وحشه جمعتنا لا و كمان الوحش قبل الحلو علشان معني اننا مهما كان في بينا مشاكل او اي حاجه وحشه هي كانت بتجمعنا ببعض اكتر و بتقوي علاقتنا اكتر ببعض كل سنه و احنا هنفضل دائما ف ضهر بعض و سند ل بعض كل سنه و انتي اللي عرفتيني يعني ايه حياه يعني اي حب بجد و عايز اقولك ان بابا هيفضل معاكي و فضهرك طول العمر و يارب تبدأي سنه جديده و تحققي كل اللي نفسك فيه كلو و اطمني هفضل وراكي لحد م تحققي حلمك و بحبك ❤️ 💕";
+let i = 0;
+function startTyping(){
+    let speed = 60;
+    function type(){
+        if(i < text.length){
+            document.getElementById("message").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+// COUNTDOWN
+function startCountdown(){
+    let birthday = new Date("March 9, 2026 00:00:00").getTime();
+    let x = setInterval(function(){
+        let now = new Date().getTime();
+        let distance = birthday - now;
+
+        let days = Math.floor(distance / (1000*60*60*24));
+        let hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+        let minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+
+        document.getElementById("countdown").innerHTML =
+        "Countdown: " + days + "d " + hours + "h " + minutes + "m ";
+
+    },1000);
+}
+
+// FALLING HEARTS
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = Math.random()*3+2+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(createHeart,300);
 </script>
 
 </body>
